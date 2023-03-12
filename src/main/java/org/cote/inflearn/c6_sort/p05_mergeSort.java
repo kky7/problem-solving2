@@ -1,5 +1,7 @@
 package org.cote.inflearn.c6_sort;
 
+import java.util.Scanner;
+
 public class p05_mergeSort {
     public static void mergeSort(int[] arr) {
         sort(arr, 0, arr.length);
@@ -46,7 +48,11 @@ public class p05_mergeSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {7, 6, 5, 8, 3, 5, 9, 1};
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
         mergeSort(arr);
         for (int x : arr)
             System.out.print(x + " ");
