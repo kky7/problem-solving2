@@ -45,10 +45,13 @@ public class quickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 10, 5, 8, 7, 6, 4, 3, 2, 9};
-        int number = 10;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
 
-        solution(arr, 0, number-1);
+        solution(arr, 0, n-1);
         for(int x: arr)
             System.out.print(x+" ");
     }
