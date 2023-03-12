@@ -2,7 +2,7 @@ package org.cote.inflearn.c6_sort;
 
 import java.util.Scanner;
 
-public class quickSort_reverse {
+public class p04_quickSort {
     public static void swap(int[] arr, int p1, int p2){
         int tmp = arr[p1];
         arr[p1] = arr[p2];
@@ -16,11 +16,11 @@ public class quickSort_reverse {
         int rt = end;
 
         while(lt <= rt){ // 엇갈릴 때까지 반복
-            while( lt <= end && arr[lt] >= arr[key] ){ // 키 값보다 작은 값을 만날 때 까지
+            while( lt <= end && arr[lt] <= arr[key] ){ // 키 값보다 큰 값을 만날 때 까지
                 lt++;
             }
 
-            while(arr[rt] <= arr[key] && rt > start){ // 키 값보다 큰 값을 만날 때 까지
+            while(arr[rt] >= arr[key] && rt > start){ // 키 값보다 작은 값을 만날 때 까지
                 rt--;
             }
 
